@@ -1,0 +1,32 @@
+package baseDeDatos;
+
+import java.sql.Connection;
+
+import javax.sql.ConnectionEvent;
+
+public class baseDeDatos {
+
+	public static void main(String[] args) {
+		
+		
+		String url = " " ;
+		Connection c = new Connection(url) ;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,103 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+
+public class conversor {
+	
+
+
+	public static void main(String[] args) {
+		
+//	}
+//	
+//	
+//	public class panel extends JPanel {
+//		
+//			public void panel() {
+				JFrame frame = new JFrame("Conversor de Monedas") ;
+				
+				frame.setVisible(true);
+				frame.setSize(500 , 500 );
+				
+				JPanel panel = new JPanel () ;
+				JPanel panel2 = new JPanel () ;
+
+				
+				JLabel jlabel = new JLabel ("CONVERSOR DE MONEDAS") ;
+				//jlabel.setFont();
+				
+				JRadioButton EurIzq = new JRadioButton("EUR") ;
+				JRadioButton UsdIzq = new JRadioButton("USD") ;
+				JRadioButton BtcIzq = new JRadioButton("BTC") ;
+				JRadioButton EurDrch = new JRadioButton("EUR") ;
+				JRadioButton UsdDrch = new JRadioButton("USD") ;
+				JRadioButton BtcDrch = new JRadioButton("BTC") ;
+				
+				
+				ButtonGroup grupoIzquierda = new ButtonGroup() ;
+				
+				grupoIzquierda.add(EurIzq);
+				grupoIzquierda.add(UsdIzq);
+				grupoIzquierda.add(BtcIzq);
+				
+				ButtonGroup grupoDerecha= new ButtonGroup() ;
+				
+				grupoDerecha.add(EurDrch);
+				grupoDerecha.add(UsdDrch);
+				grupoDerecha.add(BtcDrch);
+				
+					panel.add(jlabel , BorderLayout.CENTER);
+					
+				
+				JLabel monedaOrigen = new JLabel("Moneda Origen");
+				 	JLabel monedaDestino = new JLabel("Moneda Destino");
+				
+				panel.add(monedaOrigen );
+				panel.add(EurDrch  );
+				panel.add(UsdDrch );
+				panel.add(BtcDrch );
+				panel.add(monedaDestino);
+				panel.add(EurIzq ,BorderLayout.NORTH);
+				panel.add(UsdIzq ,BorderLayout.BEFORE_FIRST_LINE);
+				panel.add(BtcIzq ,BorderLayout.NORTH);
+			
+				
+				JButton convertir = new JButton("Convertir");
+				panel.add(convertir);
+				
+				
+				
+			 	JLabel cantidad = new JLabel("Cantidad:");
+			 	panel.add(cantidad);
+			 	
+			 	JTextArea area = new JTextArea() ; 
+				panel.add(area , FlowLayout.LEFT);
+			
+			
+			frame.add(panel , FlowLayout.LEFT) ;
+
+		}
+		
+	}
+	
+	class listener extends JFrame implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			
+		}
+		
+	}
+
+
